@@ -1,0 +1,91 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/csvw",
+    {
+      "@language": "en"
+    }
+  ],
+  "dc:license": [
+    {
+      "@id": "https://creativecommons.org/licenses/by-sa/3.0/es/"
+    }
+  ],
+  "dc:modified": {
+    "@type": "xsd:date",
+    "@value": "2017-10-31"
+  },
+  "dc:publisher": {
+    "schema:name": "ajspadial",
+    "schema:url": {
+      "@id": "http://hoos.spadial.com"
+    }
+  },
+  "dc:title": "ADMP Bibliography",
+  "dcat:keyword": [
+    ""
+  ],
+  "dialect": {
+    "commentPrefix": "",
+    "delimiter": "",
+    "doubleQuote": true,
+    "encoding": "",
+    "header": true,
+    "headerRowCount": "1",
+    "lineTerminators": [
+      "\\n"
+    ],
+    "quoteChar": "",
+    "skipBlankRows": false,
+    "skipColumns": 0,
+    "skipInitialSpace": false,
+    "skipRows": "",
+    "trim": false
+  },
+  "tableSchema": {
+    "columns": [
+      {
+        "datatype": {
+          "base": "dateTime",
+          "format": "yyyy-HH-DD"
+        },
+        "dc:description": "When the resource was added to this database",
+        "name": "registry-date", 
+        "required": true
+      },
+      {
+        "datatype": "normalizedString",
+        "dc:description": "Which seach resource yield this item (see table origin.csv)",
+        "name": " origin",
+        "required": true
+      },
+      {
+        "datatype": "anyURI",
+        "dc:description": "URI of the resource",
+        "name": " URL",
+        "required": true
+      },
+      {
+        "datatype": "boolean",
+        "dc:description": "Whether the resource has been selected for further review",
+        "name": " selected"
+      },
+      {
+        "datatype": {
+          "base": "dateTime",
+          "format": "yyyy-HH-DD"
+        },
+        "dc:description": "When the resource was selected for further review",
+        "name": " selection-decision-date"
+      },
+      {
+        "datatype": "string",
+        "dc:description": "Why this resources was no selected for further review",
+        "name": " rejection-causes"
+      }
+    ],
+    "primaryKey": [
+      " URL"
+    ]
+  },
+  "url": "https://raw.githubusercontent.com/ajspadial/admpslr/master/bibliography.csv"
+}
